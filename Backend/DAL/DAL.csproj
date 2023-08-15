@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{117C8E3C-07B2-4BB0-8549-61CF4478044C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="Interfaces\IAuth.cs" />
+    <Compile Include="Interfaces\IRepo.cs" />
+    <Compile Include="Interfaces\IUser.cs" />
+    <Compile Include="Migrations\202305021748241_InitialMigration.cs" />
+    <Compile Include="Migrations\202305021748241_InitialMigration.designer.cs">
+      <DependentUpon>202305021748241_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305022228368_order.cs" />
+    <Compile Include="Migrations\202305022228368_order.designer.cs">
+      <DependentUpon>202305022228368_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305030749009_ModifiedUser.cs" />
+    <Compile Include="Migrations\202305030749009_ModifiedUser.designer.cs">
+      <DependentUpon>202305030749009_ModifiedUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305131843020_keycorr.cs" />
+    <Compile Include="Migrations\202305131843020_keycorr.designer.cs">
+      <DependentUpon>202305131843020_keycorr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305131853107_keycorr1.cs" />
+    <Compile Include="Migrations\202305131853107_keycorr1.designer.cs">
+      <DependentUpon>202305131853107_keycorr1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305131901131_keycorr3.cs" />
+    <Compile Include="Migrations\202305131901131_keycorr3.designer.cs">
+      <DependentUpon>202305131901131_keycorr3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305131904517_keycorr4.cs" />
+    <Compile Include="Migrations\202305131904517_keycorr4.designer.cs">
+      <DependentUpon>202305131904517_keycorr4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305131905587_keycorr5.cs" />
+    <Compile Include="Migrations\202305131905587_keycorr5.designer.cs">
+      <DependentUpon>202305131905587_keycorr5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305131908558_keycorr6.cs" />
+    <Compile Include="Migrations\202305131908558_keycorr6.designer.cs">
+      <DependentUpon>202305131908558_keycorr6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305131919442_keycorr7.cs" />
+    <Compile Include="Migrations\202305131919442_keycorr7.designer.cs">
+      <DependentUpon>202305131919442_keycorr7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305132052458_tkon.cs" />
+    <Compile Include="Migrations\202305132052458_tkon.designer.cs">
+      <DependentUpon>202305132052458_tkon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305132208258_tkon1.cs" />
+    <Compile Include="Migrations\202305132208258_tkon1.designer.cs">
+      <DependentUpon>202305132208258_tkon1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305142329386_initDB.cs" />
+    <Compile Include="Migrations\202305142329386_initDB.designer.cs">
+      <DependentUpon>202305142329386_initDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Delivery.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderItem.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\CustomerService.cs" />
+    <Compile Include="Models\Token.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Wishlist.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataContext.cs" />
+    <Compile Include="Repos\CategoryRepo.cs" />
+    <Compile Include="Repos\CustomerServiceRepo.cs" />
+    <Compile Include="Repos\DeliveryRepo.cs" />
+    <Compile Include="Repos\OrderItemRepo.cs" />
+    <Compile Include="Repos\OrderRepo.cs" />
+    <Compile Include="Repos\ProductRepo.cs" />
+    <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\TokenRepo.cs" />
+    <Compile Include="Repos\UserRepo.cs" />
+    <Compile Include="Repos\WishlistRepo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202305021748241_InitialMigration.resx">
+      <DependentUpon>202305021748241_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305022228368_order.resx">
+      <DependentUpon>202305022228368_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305030749009_ModifiedUser.resx">
+      <DependentUpon>202305030749009_ModifiedUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305131843020_keycorr.resx">
+      <DependentUpon>202305131843020_keycorr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305131853107_keycorr1.resx">
+      <DependentUpon>202305131853107_keycorr1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305131901131_keycorr3.resx">
+      <DependentUpon>202305131901131_keycorr3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305131904517_keycorr4.resx">
+      <DependentUpon>202305131904517_keycorr4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305131905587_keycorr5.resx">
+      <DependentUpon>202305131905587_keycorr5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305131908558_keycorr6.resx">
+      <DependentUpon>202305131908558_keycorr6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305131919442_keycorr7.resx">
+      <DependentUpon>202305131919442_keycorr7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305132052458_tkon.resx">
+      <DependentUpon>202305132052458_tkon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305132208258_tkon1.resx">
+      <DependentUpon>202305132208258_tkon1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305142329386_initDB.resx">
+      <DependentUpon>202305142329386_initDB.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
